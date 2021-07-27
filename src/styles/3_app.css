@@ -1,0 +1,14 @@
+.font-os {
+    font-family: opensans !important;
+}
+
+.font-osl {
+    font-family: opensans-light !important;
+}
+
+._img-icon {
+    display: inline-block;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

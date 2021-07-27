@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    <title>ATOM:ENV-EMULATOR: DRONA</title>
+	    <meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="drona.ror robot" />
+	    <meta name="keywords" content="" />
+
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	    <meta name="theme-color" content="#312450" />
+
+	    <meta property="og:image" content="./assets/imgs/logo.png">
+	    <meta name="twitter:image" content="./assets/imgs/logo.png">
+	    <meta name="twitter:card" content="./assets/imgs/logo.png">
+	    <link rel="icon" href="./assets/imgs/logo.png" type="image/gif" />
+
+	    <link inline-src rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	    <link inline-src rel="stylesheet" href="/styles/app.min.css" />
+	   
+	    <script inline-src src="../node_modules/muffin/dist/muffin.min.js"></script>
+
+	    <script type="text/javascript">
+	    	const MUFFIN_CONFIG = {
+				"LOGGING_LEVEL": "IMP",
+				"POST_OFFICE_WORKER_URL": "",
+				"INTROSPECT": false,
+				"DB_NAME": 'flabs_fsa_test_db',
+				"DB_VERSION": "0.3",
+				"DEBUG_SCOPE": {}
+	        };
+			window._router = new Muffin.Router();
+			_router.addRouteConfig([
+				{
+					name: "chat",
+					defaultRoute: true
+				}
+			]);
+
+			var i=0;
+		</script>
+	</head>
+
+	<body class="grey lighten-4">
+		
+		<app-ui></app-ui>
+
+	    <script inline-src src="./scripts/app.min.js"></script>
+	</body>
+</html>
