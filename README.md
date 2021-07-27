@@ -1,6 +1,4 @@
-# @element/boilerplates/connection-ws
-
-### element.js boilerpalte for ws backends
+### basic chat element in element
 
 to run - 
 ```bash
