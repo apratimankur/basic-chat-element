@@ -7,20 +7,18 @@ export default class ChatBox extends Muffin.DOMComponent {
 
     static styleMarkup(rootEl) { 
         //for component-specific style (else can also be done globally by adding css in styles folder)
-        return `<style>
-            ${rootEl} .chatbox {
-              width: 100vw;
-              height: calc(100vh - 3rem);
-              max-height: calc(100vh - 3rem);
+        return `<style type="text/css">
+            ${rootEl} {
+              height: calc(100% - 75px);
+              overflow-y: auto;
+              overflow-x: hidden;
               position: relative;
               display: flex;
               flex-direction: column;
-              overflow: auto;
             }
 
-            ${rootEl} .chatbox .chatbox-chat {
+            ${rootEl} .chatbox-chat {
               position: relative;
-              margin: 2rem;
               border-radius: 0.3em;
             }
 
@@ -38,7 +36,7 @@ export default class ChatBox extends Muffin.DOMComponent {
     }
 
     static markupFunc(_data, uid, uiVars, routeVars, _constructor) {
-        return `<div class="chatbox m0 p0 px-3 d-flex flex-column align-items-end">
+        return `<div class="chatbox w-100 m0 p0 px-3 d-flex flex-column align-items-end">
             ${_data.chats.map(_chat=>{
                 return _constructor.chatMarkup(_chat);
             }).join(" ")}
