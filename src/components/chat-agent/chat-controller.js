@@ -10,7 +10,9 @@ export default class ChatController extends Muffin.DOMComponent {
 	sendChat(srcEl, ev) {
 		console.warn("Event --> ", ev);
 		Muffin.PostOffice.sockets["ChatAgent"].dispatchMessage("new-chat", {"msg": srcEl.value});
+		srcEl.value = "";
 	}
+
 	// handleKeyup(srcEl, ev){
 	// 	if(ev.keyCode == 13){ //enter 
 	// 		this.interface.dispatchMessage("new-chat", srcEl.value);
