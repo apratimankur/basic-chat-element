@@ -54,4 +54,8 @@ export default class ChatBox extends Muffin.DOMComponent {
     onConnect(){
         this.render();
     }
+
+    postRender(){
+        this._getDomNode().scrollTop = this._getDomNode().scrollHeight;
+    }
 }
